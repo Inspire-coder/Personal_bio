@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Today, Not Someday — To‑Do List</title>
+  
+</head>
+<body>
+  <header>
+    <h1>Today, Not Someday</h1>
+    <p>My To‑Do list</p>
+<nav aria-label="Primary">
+  <ul>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </ul>
+</nav>
+<hr>
+
+  </header>
+  
+  <main>
+    <section aria-labelledby="add-task-heading">
+      <h2 id="add-task-heading">Add a Task</h2>
+    
+      <form action="#" method="get">
+        <p>
+          <label for="task-input">Task</label><br />
+          <input id="task-input" name="task" type="text" placeholder="e.g., Finish lab report" required />
+        </p>
+        <p>
+          <label for="task-notes">Notes (optional)</label><br />
+          <input id="task-notes" name="notes" type="text" placeholder="Details, links, etc." />
+        </p>
+        <p>
+          <button type="submit">Add Task</button>
+        </p>
+      </form>
+      <hr>
+    </section>
+    
+<section aria-labelledby="tasks-heading">
+  <h2 id="tasks-heading">Your Tasks</h2>
+  <ul>
+    <li>
+      <input id="t1" type="checkbox" />
+      <label for="t1">Review lecture notes for Thermodynamics — Chapters 1–3</label><br>
+      <small>Due: Aug 18</small>
+    </li>
+    <li>
+      <input id="t2" type="checkbox" />
+      <label for="t2">Go to a conference</label><br>
+      <small>Due: Today</small>
+    </li>
+    <li>
+      <input id="t3" type="checkbox" checked />
+      <label for="t3">Refactor code for kinematics assignment (linkages module)</label><br>
+      <small>Status: Completed</small>
+    </li>
+    <li>
+      <input id="t4" type="checkbox" />
+      <label for="t4">Plan study session — Laplace transforms practice problems</label><br>
+      <small>Due: This week</small>
+    </li>
+  </ul>
+</section>
+
+  </main> 
+  
+  <footer>
+    <hr>
+      author: Inspire-coder.<br>
+      &copy; 2025. All rights reserved.<br>
+      <small>
+        <a href="#"> inspirecoder@example.com</a>
+      </small>
+    </p>
+  </footer>
+</body>
+</html>
