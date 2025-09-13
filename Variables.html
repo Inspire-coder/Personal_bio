@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variables</title>
+  
+</head>
+
+<body>
+  <script>
+    // 1. Create one variable for each primitive type, store in array, and print typeof
+
+let str = "Hello";         // string
+let num = 42;              // number
+let bool = true;           // boolean
+let bigIntNum = 123456789012345678901234567890n; // bigint
+let sym = Symbol("id");    // symbol
+let undef = undefined;     // undefined
+let nul = null;            // null (typeof null is "object" due to historical reason)
+
+let primitives = [str, num, bool, bigIntNum, sym, undef, nul];
+
+for (let value of primitives) {
+    console.log(value, "=> typeof:", typeof value);
+}
+
+console.log("\n---- Var, Let, Const ----");
+
+// 2. Difference between var, let, and const
+
+if (true) {
+    var x = "I am var";     // function-scoped → leaks outside block
+    let y = "I am let";     // block-scoped → stays inside block
+    const z = "I am const"; // block-scoped and cannot be reassigned
+
+    console.log("Inside block:");
+    console.log("x:", x); // works
+    console.log("y:", y); // works
+    console.log("z:", z); // works
+}
+
+console.log("\nOutside block:");
+console.log("x:", x); // still accessible (leaks outside block)
+ //console.log("y:", y); // ReferenceError: y is not defined
+ //console.log("z:", z); // ReferenceError: z is not defined
+
+// Demonstrating const reassignment error:
+const pi = 3.14159;
+//const pi = 3; // Uncommenting this line will throw TypeError: Assignment to constant variable
+console.log("pi:", pi);
+  </script>
+</body>
+
+</html>
